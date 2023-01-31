@@ -108,8 +108,11 @@ body {
 	padding: 1rem;
 	margin-top: 1rem;
 }
+.add-to-cart-btn:hover {
+	background-color: hsl(159, 37%, 45%);
+}
 .add-to-cart-btn:active {
-	background-color: hsl(159, 37%, 20%);
+	background-color: hsl(159, 37%, 27%);
 }
 
 .attribution {
