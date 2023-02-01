@@ -24,7 +24,7 @@ body {
 	background-color: var(--cream);
 }
 
-main {
+.container {
 	flex-grow: 1;
 	display: flex;
 	justify-content: center;
