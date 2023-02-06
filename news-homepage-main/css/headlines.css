@@ -1,0 +1,36 @@
+.headlines {
+	grid-area: headlines;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--very-dark-blue);
+	padding: 1rem;
+}
+
+.headlines h1 {
+	font-size: 2rem;
+	font-weight: 800;
+	color: var(--soft-orange);
+	margin-top: 1rem;
+}
+
+.headlines a {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+	text-decoration: none;
+	font-size: smaller;
+	border-bottom: solid 1px var(--dark-grayish-blue);
+	padding: 1rem 0;
+}
+.headlines a:hover {
+	text-decoration: underline;
+}
+.headlines a:last-child {
+	border-bottom: none;
+}
+
+.headlines a h3 {
+	margin-bottom: 1rem;
+}
