@@ -6,4 +6,4 @@ Some challenges from [frontendmentor.io](https://www.frontendmentor.io)
 
 | Name | Difficulty | Technologies |
 | ----------- | ----------- | ----------- |
-| [Product preview card component](https://takaoisdabest.github.io/frontend-mentor-challenges/product-preview-card-component-main/index.html) | Newbie | HTML, CSS |
+| [Product preview card component](https://sahebkhadem.github.io/frontend-mentor-challenges/product-preview-card-component-main/index.html) | Newbie | HTML, CSS |
