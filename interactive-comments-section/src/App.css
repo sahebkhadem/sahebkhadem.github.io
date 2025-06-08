@@ -1,0 +1,75 @@
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 800px;
+	padding: 2rem;
+	position: relative;
+}
+
+.comment-input {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	align-items: flex-start;
+	width: 100%;
+	background-color: var(--white);
+	border-radius: 10px;
+	padding: 2rem;
+}
+
+.comment-textarea {
+	outline: none;
+	border: 1px solid var(--grey-100);
+	border-radius: 10px;
+	height: 100px;
+	width: 100%;
+	padding: 1rem;
+	resize: none;
+}
+
+.comment-textarea:focus {
+	box-shadow: 0 0 0 1px var(--purple-600);
+}
+
+.modal {
+	max-width: 500px;
+	background-color: var(--white);
+	border-radius: 10px;
+	padding: 2rem;
+	z-index: 99;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.modal-header {
+	color: var(--grey-800);
+}
+
+.modal-text {
+	color: var(--grey-500);
+}
+
+.modal-actions {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.modal-actions button {
+	flex-grow: 1;
+}
+
+.modal-backdrop {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #0000004d;
+	z-index: 1;
+}

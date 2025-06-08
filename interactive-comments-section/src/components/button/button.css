@@ -1,0 +1,44 @@
+.button {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border: none;
+	font: inherit;
+	font-weight: 500;
+	padding: 1rem;
+	border-radius: 10px;
+}
+
+.button:active {
+	opacity: 0.5;
+}
+
+.button-primary {
+	background-color: var(--purple-600);
+	color: white;
+	padding-inline: 2rem;
+}
+
+.button-secondary {
+	background-color: var(--grey-500);
+	color: white;
+	padding-inline: 2rem;
+}
+
+.button-danger {
+	background-color: var(--pink-400);
+	color: white;
+	padding-inline: 2rem;
+}
+
+.button-flat {
+	background-color: transparent;
+	color: var(--purple-600);
+}
+
+.button-danger-flat {
+	background-color: transparent;
+	color: var(--pink-400);
+}

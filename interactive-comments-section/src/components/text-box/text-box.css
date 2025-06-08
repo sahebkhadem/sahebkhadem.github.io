@@ -1,0 +1,24 @@
+.textbox-input {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	align-items: flex-start;
+}
+
+.textbox-textarea {
+	outline: none;
+	border: 1px solid var(--grey-100);
+	border-radius: 10px;
+	height: 100px;
+	width: 100%;
+	padding: 1rem;
+	resize: none;
+}
+
+.textbox-textarea:focus {
+	box-shadow: 0 0 0 1px var(--purple-600);
+}
+
+.textbox {
+	margin-bottom: 1rem !important;
+}
