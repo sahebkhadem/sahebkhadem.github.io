@@ -5,9 +5,9 @@ import iconPlus from "../../../assets/icon-plus.svg";
 import iconMinus from "../../../assets/icon-minus.svg";
 
 // VoteCounter component handles upvoting and downvoting logic
-const VoteCounter = () => {
+const VoteCounter = ({ score }) => {
 	// State to keep track of the current vote count
-	const [voteCount, setVoteCount] = useState(0);
+	const [voteCount, setVoteCount] = useState(score);
 	// State to track the user's vote: 'up', 'down', or null (no vote)
 	const [userVote, setUserVote] = useState(null);
 
