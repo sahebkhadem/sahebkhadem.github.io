@@ -1,5 +1,6 @@
 .textbox-input {
 	display: flex;
+	width: 100%;
 	gap: 1rem;
 	margin-bottom: 1rem;
 	align-items: flex-start;

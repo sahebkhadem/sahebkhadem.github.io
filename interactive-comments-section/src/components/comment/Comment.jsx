@@ -2,10 +2,9 @@ import { useState } from "react";
 import VoteCounter from "./vote-counter/VoteCounter";
 import TextBox from "../text-box/TextBox";
 import Button from "../button/Button";
-import iconReply from "../../assets/icon-reply.svg";
-import iconDelete from "../../assets/icon-delete.svg";
-import iconEdit from "../../assets/icon-edit.svg";
+import MobileFooter from "./mobile-footer/MobileFooter";
 import { useUser, useDeleteModal } from "../../context/Context";
+import CommentActions from "./comment-actions/CommentActions";
 
 import "./comment.css";
 
@@ -56,7 +55,9 @@ const Comment = ({ comment }) => {
 	return (
 		<div className="comment">
 			<div className={`comment-body ${isReplying ? "replying" : ""}`}>
-				<VoteCounter score={score} />
+				<div className="vote-counter-desktop-wrapper">
+					<VoteCounter score={score} />
+				</div>
 
 				<div className="comment-content-wrapper">
 					<div className="comment-header">
@@ -69,24 +70,14 @@ const Comment = ({ comment }) => {
 							<span className="rubik-medium">{user.username}</span>
 							<span className="created-at">{createdAt}</span>
 						</div>
-						<div className="comment-actions">
-							{isCurrentUser ? (
-								<>
-									<Button variant="danger-flat" clickHandler={handleDelete}>
-										<img src={iconDelete} alt="Delete icon" />
-										Delete
-									</Button>
-									<Button variant="flat" clickHandler={handleEditClick}>
-										<img src={iconEdit} alt="Edit icon" />
-										Edit
-									</Button>
-								</>
-							) : (
-								<Button variant="flat" clickHandler={handleReplyClick}>
-									<img src={iconReply} alt="Reply icon" />
-									Reply
-								</Button>
-							)}
+
+						<div className="comment-actions-desktop-wrapper">
+							<CommentActions
+								isCurrentUser={isCurrentUser}
+								handleDelete={handleDelete}
+								handleEditClick={handleEditClick}
+								handleReplyClick={handleReplyClick}
+							/>
 						</div>
 					</div>
 					{isEditing ? (
@@ -104,7 +95,19 @@ const Comment = ({ comment }) => {
 						<p className="comment-content">{content}</p>
 					)}
 				</div>
+
+				<MobileFooter>
+					<VoteCounter score={score} />
+
+					<CommentActions
+						isCurrentUser={isCurrentUser}
+						handleDelete={handleDelete}
+						handleEditClick={handleEditClick}
+						handleReplyClick={handleReplyClick}
+					/>
+				</MobileFooter>
 			</div>
+
 			{/* Reply input */}
 			{isReplying && (
 				<div className="reply-wrapper">
