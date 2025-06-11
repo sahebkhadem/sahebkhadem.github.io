@@ -3,6 +3,7 @@ import "./App.css";
 import data from "./assets/data.json";
 import Comment from "./components/comment/Comment";
 import Button from "./components/button/Button";
+import MobileFooter from "./components/comment/mobile-footer/MobileFooter";
 import { useUser, useDeleteModal } from "./context/Context";
 
 function App() {
@@ -37,11 +38,13 @@ function App() {
 			))}
 
 			<div className="comment-input">
-				<img
-					src={currentUser.image.png}
-					alt={`${currentUser.username}'s avatar`}
-					className="avatar"
-				/>
+				<div className="user-image-desktop-wrapper">
+					<img
+						src={currentUser.image.png}
+						alt={`${currentUser.username}'s avatar`}
+						className="avatar"
+					/>
+				</div>
 				<textarea
 					value={newComment}
 					onChange={handleNewCommentChange}
@@ -49,7 +52,18 @@ function App() {
 					className="comment-textarea"
 					name="comment-input"
 				/>
-				<Button variant="primary">SEND</Button>
+				<div className="send-button-desktop-wrapper">
+					<Button variant="primary">SEND</Button>
+				</div>
+
+				<MobileFooter>
+					<img
+						src={currentUser.image.png}
+						alt={`${currentUser.username}'s avatar`}
+						className="avatar"
+					/>
+					<Button variant="primary">SEND</Button>
+				</MobileFooter>
 			</div>
 
 			{isDeleteModalOpen && (
